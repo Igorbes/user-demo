@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = "com.demo.users")
-public class ServiceStart {
+public class App {
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(ServiceStart.class, args);
+        SpringApplication.run(App.class, args);
     }
 
 }

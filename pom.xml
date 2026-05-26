@@ -113,21 +113,16 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
         <org.projectlombok.lombok.version>1.18.38</org.projectlombok.lombok.version>
-        <jcache.version>1.0.0</jcache.version>
         <commons-collections.version>3.2.1</commons-collections.version>
-        <sfm-springjdbc>8.2.3</sfm-springjdbc>
-        <com.cherokeesoft.db-utils.version>2.2.3</com.cherokeesoft.db-utils.version>
-
-        <org.apache.poi.poi.version>4.1.2</org.apache.poi.poi.version>
-        <org.apache.poi.poi-ooxml.version>4.1.2</org.apache.poi.poi-ooxml.version>
-        <com.google.zxing.version>3.3.0</com.google.zxing.version>
-        <org.jsoup.jsoup.version>1.13.1</org.jsoup.jsoup.version>
-
         <com.zaxxer.HikariCP.version>4.0.3</com.zaxxer.HikariCP.version>
         <postgresql.version>42.3.3</postgresql.version>
         <org.apache.velocity.version>1.7</org.apache.velocity.version>
+        <org.testcontainers.postgresql.version>1.19.8</org.testcontainers.postgresql.version>
+        <io.springfox.springfox-swagger2.version>2.9.2</io.springfox.springfox-swagger2.version>
+        <javax.xml.bind.jaxb-api.version>2.3.0</javax.xml.bind.jaxb-api.version>
+        <io.jsonwebtoken.jjwt.version>0.8.0</io.jsonwebtoken.jjwt.version>
+        <commons-codec.commons-codec.version>1.15</commons-codec.commons-codec.version>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -151,23 +146,23 @@
         <dependency>
             <groupId>org.testcontainers</groupId>
             <artifactId>postgresql</artifactId>
-            <version>1.19.8</version>
+            <version>${org.testcontainers.postgresql.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
+            <version>${io.springfox.springfox-swagger2.version}</version>
         </dependency>
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
+            <version>${javax.xml.bind.jaxb-api.version}</version>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
-            <version>0.8.0</version>
+            <version>${io.jsonwebtoken.jjwt.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-collections</groupId>
@@ -194,7 +189,7 @@
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
-            <version>1.15</version>
+            <version>${commons-codec.commons-codec.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -228,12 +223,6 @@
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity</artifactId>
             <version>${org.apache.velocity.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>1.19.8</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 
