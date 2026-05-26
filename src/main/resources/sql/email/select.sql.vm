@@ -1,0 +1,2 @@
+select ID, USER_ID, EMAIL from public."EMAIL_DATA"
+where user_id = any(?)

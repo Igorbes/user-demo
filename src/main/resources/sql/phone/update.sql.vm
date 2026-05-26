@@ -1,0 +1,1 @@
+update public."PHONE_DATA" set phone = '$to_phone' where USER_ID = $user_id and phone = '$from_phone'

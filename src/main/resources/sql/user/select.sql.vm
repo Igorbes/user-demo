@@ -1,0 +1,44 @@
+#define($view_select)
+    select ID, NAME, DATE_OF_BIRTH, PASSWORD from public."USER"
+#end
+#define($view_count)
+    select count(1) from public."USER"
+#end
+
+#define($filter)
+    where true
+    #if($id)
+      and ID = $id
+    #end
+    #if($date_of_birth)
+      and DATE_OF_BIRTH > '$date_of_birth'::date
+    #end
+    #if($phone)
+      and ID in (select USER_ID from public."PHONE_DATA" where PHONE = '$phone')
+    #end
+    #if($name)
+      and NAME like '$name%'
+    #end
+    #if($email)
+      and ID in (select USER_ID from public."EMAIL_DATA" where EMAIL = '$email')
+    #end
+    #if($password)
+      and PASSWORD = '$password'
+    #end
+#end
+
+#if($count == true)
+    $view_count
+    $filter
+#else
+    $view_select
+    $filter
+    order by ID
+    #if($offset) offset $offset #end
+    #if($limit) limit $limit #end
+#end
+
+
+
+
+

@@ -1,0 +1,1 @@
+delete from public."EMAIL_DATA" where USER_ID = $user_id and email = '$email';

@@ -1,0 +1,1 @@
+select count(1) from public."PHONE_DATA" where USER_ID = $user_id

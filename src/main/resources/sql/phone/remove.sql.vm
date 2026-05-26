@@ -1,0 +1,1 @@
+delete from public."PHONE_DATA" where USER_ID = $user_id and phone = :phone

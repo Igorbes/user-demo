@@ -1,0 +1,2 @@
+select ID, USER_ID, BALANCE from public."ACCOUNT"
+where user_id = any(?)

@@ -1,0 +1,1 @@
+insert into public."PHONE_DATA"(USER_ID, PHONE) values ($user_id, '$phone')

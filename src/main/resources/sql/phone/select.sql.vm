@@ -1,0 +1,2 @@
+select ID, USER_ID, PHONE from public."PHONE_DATA"
+where user_id = any(?)

@@ -1,0 +1,6 @@
+with from_st as(
+    update public."ACCOUNT" set BALANCE = BALANCE + $amount where USER_ID = $to returning $amount
+), to_st as (
+    update public."ACCOUNT" set BALANCE = BALANCE - (select * from from_st) where USER_ID = $from returning BALANCE
+)
+select * from to_st

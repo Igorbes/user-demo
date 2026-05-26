@@ -1,0 +1,1 @@
+update public."ACCOUNT" set BALANCE = (BALANCE * (100 + $percent) / 100)::int8 where ID = $id returning BALANCE::int8;

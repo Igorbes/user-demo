@@ -1,0 +1,1 @@
+update public."EMAIL_DATA" set email = '$to_email' where USER_ID = $user_id and email = '$from_email'

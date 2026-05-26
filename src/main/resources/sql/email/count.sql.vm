@@ -1,0 +1,1 @@
+select count(1) from public."EMAIL_DATA" where USER_ID = $user_id

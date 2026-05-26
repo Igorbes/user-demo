@@ -1,0 +1,3 @@
+select BALANCE from public."ACCOUNT"
+where USER_ID = $user_id
+for update
